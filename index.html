@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Molodost</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Molodost</span>
+    </div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#overview')" title="Продукты">Продукты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Работа">FAQ</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Ссылки">Ссылки</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Молодость</h1>
+    <h3>это - мы!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <img src="img/8p1mePnIr48.jpg" style="position: relative; left: 300px;"/>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Что мы делаем</h2>
+    <h4></h4>
+
+    <div class="img">
+      <a href="Bridge.html"><img src="img/background.png" alt=""></a>
+      <span>Вышел в релиз</span>
+    </div>
+    <div class="img">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img src="img/background2.png" alt=""></a>
+      <span>В разработке</span>
+    </div>
+  </div>
+
+  <div id="faq">
+    <h2>ИЩЕМ РАБОВ ЗА ДЕНЬГИ</h2>
+    <h2>/</h2>
+    <div>
+      <span class="title">Почему мы?</span><br>
+      <span class="heading">Большие зарплаты</span>
+      <p>Даже работники без опыта могут расчитывать на зарплаты выше среднего по рынку.</p>
+      <span class="heading">Молодой коллектив</span>
+      <p>Дружелюбный коллектив в который будет легко влиться молодоым специалистам.</p>
+      <span class="heading">Возможности личностного роста</span>
+      <p>В зависимости от упехов в компании, возможны повышения на более высокие должности.</p>
+    </div>
+    <div>
+      <span class="title">Кто нам нужен</span><br>
+      <span class="heading">Мы ценим специалистов</span>
+      <p>Если у вас огромное количество успешно закрытых кейсов, в нашей компании вас оценят по достоинству.</p>
+      <span class="heading">Но мы рады и новичкам</span>
+      <p>Если у вас все необходимые знания, но совсем нету рабочего опыта - вам все равно будут рады.</p>
+      <span class="heading">Кого мы ищем</span>
+      <p>Нам крайне нужны все виды художников: 2д, 3д, скетчеры. Также не отказываем программистам на C#, Java. Будем рады тестерам.</p>
+    </div>
+    <div>
+      <span class="title">Как с нами связатся</span><br>
+      <span class="heading">Почта</span>
+      <p>Вы можете скидывать свои анкеты к нам на почту: avdem03@gmail.com</p>
+      <span class="heading">HeadHunter</span>
+      <p>Также можете попытаться найти анкеты на HH.ru</p>
+      <span class="heading">Телефон</span>
+      <p>Еще у нас есть телефон: 89516056912</p>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <img src="img/8p1mePnIr48.jpg" style="position: relative; left: 300px;"/>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <a href="https://vk.com/undkab"><img src="img/VK_Compact_Logo_(2021-present).svg.png" width="100" height="100" style="position: relative; left: 50px;"></a>
+    <a href="https://discord.gg/ZzKFBvG6"><img src="img/2111370.png" width="100" height="100" style="position: relative; left: 100px;"></a>
+    <a href="https://www.youtube.com/channel/UCo81_Ka8b5o9UpGQdnHCWcg"><img src="img/Без названия.png" width="100" height="100" style="position: relative; left: 150px;"></a>
+    <a href="https://tomsk.hh.ru/"><img src="img/HeadHunter_logo.png" width="100" height="100" style="position: relative; left: 200px;"></a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
